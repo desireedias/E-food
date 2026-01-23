@@ -6,12 +6,14 @@ type Props = {
   capa: string
 }
 
-const BannerPerfil = ({ nome, categoria, capa }: Props) => (
-  <Imagem foto={capa}>
-    <div className="container">
-      <Categoria>{categoria}</Categoria>
-      <TituloBanner>{nome}</TituloBanner>
-    </div>
-  </Imagem>
-)
+const BannerPerfil = ({ nome, categoria, capa }: Props) => {
+  return (
+    <Imagem foto={capa}>
+      <div className="container">
+        <Categoria>{categoria}</Categoria>
+        <TituloBanner>{nome}</TituloBanner>
+      </div>
+    </Imagem>
+  )
+}
 export default BannerPerfil
