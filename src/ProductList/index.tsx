@@ -23,6 +23,9 @@ const ProductList = ({ pratos }: Props) => {
     data: null as Prato | null
   })
 
+  if (!pratos || pratos.length === 0) {
+    return <h3 className="container">Carregando...</h3>
+  }
   return (
     <div className="container">
       <ListContainer>
@@ -31,7 +34,11 @@ const ProductList = ({ pratos }: Props) => {
             key={item.id}
             foto={item.foto}
             nome={item.nome}
-            descricao={item.descricao.slice(0, 150) + '...'}
+            descricao={
+              item.descricao.length
+                ? item.descricao.slice(0, 150) + '...'
+                : item.descricao
+            }
             onOpen={() => setModal({ isVisible: true, data: item })}
           />
         ))}

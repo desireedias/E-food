@@ -45,9 +45,9 @@ const RestaurantCard = ({
         </div>
       </TituloContainer>
       <Descricao>{description}</Descricao>
-      <Link to={`/perfil/${id}`}>
-        <Button title="Saiba mais">Saiba Mais</Button>
-      </Link>
+      <Button type="link" to={`/perfil/${id}`} title="Saiba mais">
+        Saiba Mais
+      </Button>
     </CardContent>
   </CardContainer>
 )

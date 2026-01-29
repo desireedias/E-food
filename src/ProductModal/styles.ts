@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { cores } from '../styles'
+import { breackpoints, cores } from '../styles'
 
 export const Modal = styled.div`
   position: fixed;
@@ -29,6 +29,9 @@ export const Modal = styled.div`
 export const ModalContainer = styled.div`
   position: relative;
   z-index: 3;
+  width: 90%;
+  max-width: 1024px;
+
   > img {
     width: 16px !important;
     height: 16px !important;
@@ -47,11 +50,26 @@ export const ModalContent = styled.div`
   display: flex;
   width: 1024px;
 
+  @media (max-width: ${breackpoints.tablet}) {
+    flex-direction: column; // Empilha imagem e texto no mobile
+    padding: 16px;
+    max-height: 80vh; // Evita que o modal seja maior que a tela
+    overflow-y: auto;
+    width: 90%;
+  }
+
   img {
     width: 280px;
     height: 280px;
     object-fit: cover;
     margin-right: 24px;
+
+    @media (max-width: ${breackpoints.tablet}) {
+      width: 100%; // Imagem ocupa toda a largura no mobile
+      height: 200px;
+      margin-right: 0;
+      margin-bottom: 16px;
+    }
   }
 
   h4 {
@@ -76,4 +94,9 @@ export const BotaoModal = styled.button`
   font-size: 14px;
   cursor: pointer;
   width: fit-content;
+
+  @media (max-width: ${breackpoints.tablet}) {
+    width: 100%;
+    padding: 12px;
+  }
 `

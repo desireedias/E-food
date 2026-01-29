@@ -4,7 +4,7 @@ export interface Prato {
   descricao: string
   porcao: string
   foto: string
-  preco: string
+  preco: number
 }
 
 export interface Restaurante {

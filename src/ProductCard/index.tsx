@@ -12,7 +12,7 @@ const ProductCard = ({ nome, foto, descricao, onOpen }: Props) => (
     <Foto src={foto} alt={nome} />
     <Titulo>{nome}</Titulo>
     <Descricao>{descricao}</Descricao>
-    <BotaoAdicionar onClick={onOpen}>Adicionar ao carrinho</BotaoAdicionar>
+    <BotaoAdicionar onClick={onOpen}>Saiba mais</BotaoAdicionar>
   </Card>
 )
 
