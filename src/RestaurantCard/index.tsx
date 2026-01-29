@@ -9,7 +9,6 @@ import {
 } from './styles'
 import Tag from '../Tag'
 import Button from '../Button'
-import { Link } from 'react-router-dom'
 
 type Props = {
   id: number

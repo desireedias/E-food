@@ -7,7 +7,7 @@ import { useGetPratosQuery } from '../../services/api'
 const Perfil = () => {
   const { id } = useParams()
 
-  const { data: restaurante } = useGetPratosQuery(id!)
+  const { data: restaurante } = useGetPratosQuery(id || '')
 
   if (!restaurante) return <h3>Carregando...</h3>
 
