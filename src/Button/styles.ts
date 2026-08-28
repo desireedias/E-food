@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 
 type Props = {
   variant?: 'primary' | 'secondary'
+  disabled?: boolean
 }
 
 const BaseStyles = css<Props>`
@@ -23,6 +24,11 @@ const BaseStyles = css<Props>`
     props.variant === 'primary' ? cores.salmaoClaro : cores.salmao};
 
   border: 1px solid ${cores.salmao};
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
 `
 
 export const ButtonContainer = styled.button<Props>`

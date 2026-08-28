@@ -7,6 +7,7 @@ type Props = {
   onClick?: () => void
   children: React.ReactNode
   variant?: 'primary' | 'secondary' // Propriedade de cor
+  disabled?: boolean
 }
 
 const Button = ({
@@ -15,6 +16,7 @@ const Button = ({
   to,
   onClick,
   children,
+  disabled,
   variant = 'primary'
 }: Props) => {
   if (type === 'button' || type === 'submit') {
@@ -24,6 +26,7 @@ const Button = ({
         title={title}
         onClick={onClick}
         variant={variant} // Repassa a cor aqui
+        disabled={disabled}
       >
         {children}
       </S.ButtonContainer>
