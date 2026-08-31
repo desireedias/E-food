@@ -38,6 +38,13 @@ export const InputGroup = styled.div<InputGroupProps>`
       border: 2px solid #ff0000;
     }
   }
+
+  small {
+    color: #fff;
+    font-size: 12px;
+    margin-bottom: 4px;
+    display: block;
+  }
 `
 
 export const CheckoutContainer = styled.div`
@@ -55,7 +62,6 @@ export const CheckoutContainer = styled.div`
     margin-bottom: 16px;
   }
 
-  /* Ajuste no botão para cobrir 100% da largura e dar margem */
   button {
     width: 100%;
     margin-bottom: 8px;
